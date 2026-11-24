@@ -146,6 +146,32 @@ MonoBehaviour:
   stopDistance: 1.5
   walkClipName: Mammoth|Mammoth-Move-Fwd
   idleClipName: Mammoth|A - Mammoth-Idle
+--- !u!1 &652767374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1957651719448814, guid: b5a5a17dc3a6d9e47bd468828a2dec34, type: 3}
+  m_PrefabInstance: {fileID: 868446403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &652767378
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652767374}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.15
+  m_Center: {x: -0.16, y: 0.18798688, z: -0.1379022}
 --- !u!1 &805641667
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlacePortalOnFloor
   portalRoot: {fileID: 1934712282}
+  flipFacingDirection: 0
+  snapToDetectedFloor: 1
+  verticalOffset: 0
 --- !u!1 &818011633
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1934712282}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826325204
 GameObject:
@@ -530,7 +559,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1957651719448814, guid: b5a5a17dc3a6d9e47bd468828a2dec34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 652767378}
   m_SourcePrefab: {fileID: 100100000, guid: b5a5a17dc3a6d9e47bd468828a2dec34, type: 3}
 --- !u!4 &868446404 stripped
 Transform:
@@ -1730,7 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2142,7 +2174,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 818011636}
   - {fileID: 933710224}
   - {fileID: 868446404}
   - {fileID: 1622473378}
@@ -2156,6 +2187,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1251705980}
   - {fileID: 805641673}
+  - {fileID: 818011636}
   - {fileID: 1934712282}
   - {fileID: 826325208}
   - {fileID: 1932068422}
